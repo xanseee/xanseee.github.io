@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f2ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .slider-container {
+            width: 100%;
+            max-width: 960px;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #b3d4ff;
+            border-radius: 8px;
+            text-align: center;
+        }
+        h1 {
+            color: #003366;
+            margin-top: 0;
+        }
+        .gallery-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .arrow-btn {
+            background: none;
+            border: none;
+            font-size: 40px;
+            color: #0055a4;
+            cursor: pointer;
+            padding: 0 10px;
+            user-select: none;
+            flex-shrink: 0;
+        }
+        .arrow-btn:hover {
+            color: #003366;
+        }
+        .arrow-btn:disabled {
+            color: #ccc;
+            cursor: default;
+        }
+        .gallery-viewport {
+            overflow: hidden;
+            width: 100%;
+        }
+        .gallery-track {
+            display: flex;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+        .gallery-item {
+            flex: 0 0 100%;
+            box-sizing: border-box;
+        }
+        @media (min-width: 768px) {
+            .gallery-item {
+                flex: 0 0 33.3333%;
+            }
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            padding: 0 5px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .pager {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .dot {
+            width: 14px;
+            height: 14px;
+            background-color: #b3d4ff;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 1px solid #0055a4;
+        }
+        .dot.active {
+            background-color: #0055a4;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <h1>Галерея изображений</h1>
+
+        <div class="gallery-wrapper">
+            <button class="arrow-btn" id="prevBtn" aria-label="Назад">&#8592;</button>
+
+            <div class="gallery-viewport">
+                <div class="gallery-track" id="galleryTrack">
+                    <div class="gallery-item"><img src="pics/images.jfif" alt="Изображение 1"></div>
+                    <div class="gallery-item"><img src="pics/images (1).jfif" alt="Изображение 2"></div>
+                    <div class="gallery-item"><img src="pics/images (2).jfif" alt="Изображение 3"></div>
+                    <div class="gallery-item"><img src="pics/images (3).jfif" alt="Изображение 4"></div>
+                    <div class="gallery-item"><img src="pics/images (4).jfif" alt="Изображение 5"></div>
+                    <div class="gallery-item"><img src="pics/images (5).jfif" alt="Изображение 6"></div>
+                    <div class="gallery-item"><img src="pics/images (6).jfif" alt="Изображение 7"></div>
+                    <div class="gallery-item"><img src="pics/images (7).jfif" alt="Изображение 8"></div>
+                </div>
+            </div>
+
+            <button class="arrow-btn" id="nextBtn" aria-label="Вперед">&#8594;</button>
+        </div>
+
+        <div class="pager" id="pager"></div>
+    </div>
+
+    <script src="js7.js"></script>
+</body>
+</html>
