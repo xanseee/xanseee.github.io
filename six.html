@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 6</title>
+    <script src="js6.js" defer></script>
+</head>
+<body>
+    <h1>Калькулятор стоимости услуги</h1>
+
+    <form id="calc-form">
+        <label>Количество:
+            <input type="number" id="quantity" value="1" min="1">
+        </label>
+        <br><br>
+
+        <p>Выберите услугу</p>
+        <label><input type="radio" name="serviceType" value="1" checked>Услуга 1 - 1000 руб</label><br>
+        <label><input type="radio" name="serviceType" value="2">Услуга 2 - 2000 руб</label><br>
+        <label><input type="radio" name="serviceType" value="3">Услуга 3 - 3000 руб</label><br>
+        <br>
+
+        <div id="option-container">
+            <label>Выберите опцию:
+                <select id="service-option">
+                    <option value="500">Опция 1 + 500 руб</option>
+                    <option value="1200">Опция 2 + 1200 руб</option>
+                    <option value="2000">Опция 3 + 2000 руб</option>
+                </select>
+            </label>
+            <br><br>
+        </div>
+
+        <div id="property-container">
+            <label>
+                <input type="checkbox" id="service-property" value="800">
+                Добавить спец. обслуживание + 800 руб
+            </label>
+            <br><br>
+        </div>
+    </form>
+
+    <div id="result"></div>
+</body>
+</html>
