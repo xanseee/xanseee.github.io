@@ -80,22 +80,26 @@
     <fieldset>
         <legend>Личные данные</legend>
 
-        <label for="fio">ФИО:</label>
-        <input type="text" id="fio" name="fio" required>
+        <label>1. ФИО:
+            <input type="text" name="fio" pattern="^[А-ЯЁA-Z][а-яёa-z]+\s[А-ЯЁA-Z][а-яёa-z]+\s[А-ЯЁA-Z][а-яёa-z]+$" title="Введите ровно 3 слова, каждое с большой буквы (например: Иванов Иван Иванович). Цифры запрещены." required>
+        </label><br><br>
 
-        <label for="phone">Телефон:</label>
-        <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67">
+        <label>2. Телефон:
+            <input type="tel" name="phone" pattern="(\+7|8)?[0-9]{10}" title="Формат: +7-999-999-99-99" required>
+        </label><br><br>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
+        <label>3. Почта:
+            <input type="email" name="email" required>
+        </label><br><br>
 
-        <label for="birthdate">Дата рождения:</label>
-        <input type="date" id="birthdate" name="birthdate">
+        <label>4. Дата рождения:
+            <input type="date" name="dob" onfocus="this.max=new Date().toISOString().split('T')[0]" required>
+        </label><br><br>
 
         <fieldset>
             <legend>Пол:</legend>
             <label class="inline-label">
-                <input type="radio" name="gender" value="male"> Мужской
+                <input type="radio" name="gender" value="male" required> Мужской
             </label>
             <label class="inline-label">
                 <input type="radio" name="gender" value="female"> Женский
@@ -107,7 +111,7 @@
         <legend>Дополнительная информация</legend>
 
         <label for="lang">Любимый язык программирования:</label>
-        <select id="lang" name="lang" multiple size="11">
+        <select id="lang" name="langs" multiple size="11">
             <option value="Pascal">Pascal</option>
             <option value="C">C</option>
             <option value="C++">C++</option>
