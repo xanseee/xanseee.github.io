@@ -1,0 +1,48 @@
+body {
+    background-color: #e6f2ff;
+}
+
+.custom-header {
+    background-color: #003366;
+}
+
+/* Переопределяем цвет текста в шапке и подвале на белый */
+.custom-header .h4,
+.custom-header .nav-link,
+.custom-header p {
+    color: #ffffff !important;
+}
+
+.custom-block {
+    background-color: #ffffff;
+    border: 1px solid #b3d4ff;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Настройка таблицы, чтобы она была в тон сайта */
+.table thead th {
+    background-color: #0055a4;
+    color: #ffffff;
+    border-color: #0055a4;
+}
+
+.table td, .table th {
+    border-color: #ccc;
+}
+
+/* Настройка кнопки отправки */
+.btn-success {
+    background-color: #0055a4;
+    border-color: #0055a4;
+}
+
+.btn-success:hover {
+    background-color: #003366;
+    border-color: #003366;
+}
