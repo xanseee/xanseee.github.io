@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 5</title>
+    <script src="js5.js" defer></script>
+</head>
+<body>
+    <h1>Калькулятор стоимости</h1>
+
+    <form id="calculator-form">
+        <label for="quantity">Количество товаров:</label>
+        <input type="text" id="quantity" name="quantity" placeholder="Введите количество">
+        <br><br>
+
+        <label for="product">Выберите товар:</label>
+        <select id="product" name="product">
+            <option value="100">Товар на 100</option>
+            <option value="200">Товар на 200</option>
+            <option value="300">Товар на 300</option>
+            <option value="350">Товар на 350</option>
+        </select>
+        <br><br>
+
+        <button id="calculate-btn">Рассчитать стоимость</button>
+    </form>
+
+    <br>
+    <div id="result"></div>
+</body>
+</html>
